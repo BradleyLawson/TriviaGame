@@ -1,0 +1,20 @@
+body{
+	background: url('../images/waterfall.jpg');
+	background-repeat: no-repeat;
+	background-size: cover; 
+}
+.mainBody{
+	margin: 75px 0px 75px 0px;
+	background: white;
+	height: 500px;
+}
+.alignImage{
+	text-align: center;
+}
+img{
+	margin-top: 50px;
+}
+#mainSection{
+	text-align: center;
+	font-weight: bold;
+}

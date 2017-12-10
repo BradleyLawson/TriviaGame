@@ -1,0 +1,27 @@
+Pseudocode for Trivia Game
+
+I. Create basic html document
+	1.	don't create all of the elements (i.e. buttons) etc. (need to do in JS file using Jquery)
+		a.	create div's for main element
+		b.	add div's to main element
+		c. create <h2> elements withing each div that will contain the question
+		d.	create input withing each div (so, each div will contain the question and the possible answers)
+	2.	need some basic elements (div). Maybe just one main div
+		a.	May create div for picture or heading text
+		b.	
+II.	CSS can be done when functionality is done
+III.	JS/JQuery
+	A.	Create a start button
+	B.	Create elements
+		1.	Add elements to DOM
+		2.	Create id's for elements
+	C.	Create timer
+	D.	Create questions
+		1.	maybe in an array and display them randomly, in order
+	E.	Create inputs
+		1.	radio buttons
+		2.	radio buttons need to be associated with the correct answers
+
+		PSEUDOCODE
+
+		// 
