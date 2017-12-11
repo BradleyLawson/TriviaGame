@@ -4,24 +4,36 @@ $(function(){
 var correctGuessed = 0;
 var wrongGuessed = 0;
 
-// var questionsAnswersBulletsArray = [
-// //{
-// 	question: 'What is the first book of the bible?', 
-// 	//possibleAnswers: 'Genesis Matthew Daniel Hezekiah',
-// // },
-// // {
-// 	question: 'The disciple whom Jesus loved wrote what prophetic book?', 
-// 	//possibleAnswers: 'Micah Hezekiah Isaiah Revelation',
-// // },
-// // {
-// 	question: 'In Psalms 23 the Lord is described as what?', 
-// 	//possibleAnswers: 'Shepherd Lamb Lion King'
-// //},
-// // {
-// // 	question: 'What is the first book of the bible?', 
-// // 	possibleAnswers: 'Genesis Matthew Daniel Hezekiah',
-// // },
-// ]
+
+
+var newButton = $('<button>' + 'Start Game' + '</button>');
+newButton.attr('id', 'buttonStyle');
+$('#mainSection').append(newButton);
+
+//start game button begins game
+newButton.click(function(){
+
+newButton.remove();
+
+// Timer Section
+
+ var count = 60;
+
+ var counter = setInterval(timer, 1000);
+
+ function timer(){
+ 	count = count - 1;
+ 	if (count <=0){
+ 		clearInterval(counter);
+ 		return;
+ 	}
+ 	$('#timer').html(count + " secs");
+ }
+
+
+
+
+//End of Timer Section
 
 var	questionAnswerArray = [
 {
@@ -112,13 +124,16 @@ var	questionAnswerArray = [
 
 for (var i = 0; i < questionAnswerArray.length; i++){
 	var newQuestionDiv = $('<div>' + questionAnswerArray[i].question + '</div>');
-	var newAnswerDiv = $('<form>' + '<input type = "radio">' + questionAnswerArray[i].answer[0] + '</input>' + '<input type = "radio">' + questionAnswerArray[i].answer[1] + '</input>' + '<input type = "radio">' + questionAnswerArray[i].answer[2] + '</input>' + '<input type = "radio">' + questionAnswerArray[i].answer[3] + '</input>' + '</form>');
+	var newAnswerDiv = $('<form>' + '<input type = "radio" name = "radAnswer">' + questionAnswerArray[i].answer[0] + '</input>' + '<input type = "radio" name = "radAnswer">' + questionAnswerArray[i].answer[1] + '</input>' + '<input type = "radio" name = "radAnswer">' + questionAnswerArray[i].answer[2] + '</input>' + '<input type = "radio" name = "radAnswer">' + questionAnswerArray[i].answer[3] + '</input>' + '</form>');
 
 	newQuestionDiv.addClass('bg-primary text-white');
 	newQuestionDiv.attr('id', 'style');
+
+	newAnswerDiv.attr('id', 'styling')
 	
 	questionAnswerDiv.append(newQuestionDiv);
 	newQuestionDiv.append(newAnswerDiv);
 }
-	
+
+});	
 });

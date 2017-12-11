@@ -19,7 +19,20 @@ img{
 	text-align: center;
 	font-weight: bold;
 	font-size: 24px;
+	width: 100%;
 }
 #style{
 	padding:50px;
+}
+#styling{
+	margin: 20px;
+}
+input{
+	margin: 20px;
+}
+nav{
+	color:white;
+	font-size: 24px;
+	font-weight: bold;
+	text-align: center;
 }
