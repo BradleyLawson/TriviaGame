@@ -156,6 +156,9 @@ for (var i = 0; i < questionAnswerArray.length; i++){
 	var right = 0;
 	var wrong = 0;
 
+	//^^^^incomplete***** still need to check values. Could not get 
+	//to console.log. Following code does not work
+
 	$('#checkAnswers').on("click", function(){
 
 	var submitButton = $('<button>' + 'Submit' + '</button>');
@@ -182,6 +185,10 @@ $('input[type=radio][name=radAnswer]').on("click", function(){
 		};
 	});
 });
+//following would need to take the value of the clicked buttons - add
+// the correct, add the incorrect
+// need to display this info on the screen with a play again button
+// then loop through game again.
 
 //});	
 //});
