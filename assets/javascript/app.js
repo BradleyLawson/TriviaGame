@@ -140,7 +140,7 @@ for (var i = 0; i < questionAnswerArray.length; i++){
 	var choices = questionAnswerArray[i].answer;
 	var correct = questionAnswerArray[i].correctAnswer;
 	var newQuestionDiv = $('<div>' + question + '</div>');
-	var newAnswerDiv = $('<form>' + '<input type = "radio" name = "radAnswer" class = "radioClasses" value = "' + choices[0] + '">' + choices[0] + '</input>' + '<input type = "radio" name = "radAnswer" value = "' + choices[1] + '">' + choices[1] + '</input>' + '<input type = "radio" name = "radAnswer" value = "' + choices[2] + '">' + choices[2] + '</input>' + '<input type = "radio" name = "radAnswer" value = "' + choices[3] + '">' + choices[3] + '</input>' + '</form>');
+	var newAnswerDiv = $('<form>' + '<input type = "radio" name = "radAnswer" class = "radioClasses" value = "' + choices[0] + '">' + choices[0] + '</input>' + '<input type = "radio" name = "radAnswer" class = "radioClasses" value = "' + choices[1] + '">' + choices[1] + '</input>' + '<input type = "radio" name = "radAnswer" class = "radioClasses" value = "' + choices[2] + '">' + choices[2] + '</input>' + '<input type = "radio" name = "radAnswer" class = "radioClasses" value = "' + choices[3] + '">' + choices[3] + '</input>' + '</form>');
 
 	newQuestionDiv.addClass('bg-primary text-white');
 	newQuestionDiv.attr('id', 'style');
@@ -155,7 +155,20 @@ for (var i = 0; i < questionAnswerArray.length; i++){
 	var right = 0;
 	var wrong = 0;
 
-$('input').on("click", function(){
+
+
+$('input[type=radio][name=radAnswer]').on("click", function(){
+	var checkValues = $( "input[type=radio][name=radAnswer]:checked" ).val();
+		if (checkValues == correct){
+			right++;
+			console.log("You got it");
+			console.log(right);
+		} else {
+			wrong++;
+			console.log("Wrong");
+			console.log(wrong);
+		};
+	//console.log(checkValues);
 	//console.log ($("input:checked").val());
 	//console.log(valueCheck);
 	//var checkValues = $('form').serializeArray();
